@@ -1,0 +1,9 @@
+function bubbleSort(arr)                    
+    n = length(arr)                         -- Time: 0      ; Space: 1
+    for i = 0 to n - 1                      -- Time: n      ; Space: 0                 
+        for j = 0 to n - i - 2              -- Time: n^2    ; Space: 0
+            if arr[j] > arr[j + 1]          -- Time: 0      ; Space: 0    
+                swap arr[j] and arr[j + 1]  -- Time: n      ; Space: 0
+
+                                   -- Total -------------------------------
+                                            -- Time: n^2 + n   ; Space:1

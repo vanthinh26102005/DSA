@@ -1,0 +1,28 @@
+function mergeSort(arr)                 
+    if length of arr <= 1                            -- Time: 1 ; Space: 1
+        return arr                                   -- Time: 1 ; Space: 1
+
+    mid = length of arr / 2                          -- Time: 1 ; Space: 1
+    left = mergeSort(arr[0...mid])                   -- Time: nlog(n) ; Space: log(n)
+    right = mergeSort(arr[mid...end])                -- Time: nlog(n) ; Space: log(n)
+
+    return merge(left, right)                        -- Time: n; Space: n
+                                            -- Total -------------------------------
+                                                     -- Time: 2nlog(n)+3; Space: 2log(n)+3
+
+function merge(left, right)                         
+    result = empty array                             -- Time: 1 ; Space: n
+    while left and right are not empty               -- Time: n ; Space: n
+        if left[0] <= right[0]
+            append left[0] to result                 -- Time: n/2 ; Space: n/2
+            remove left[0] from left                 -- Time: n/2 ; Space: n/2
+        else
+            append right[0] to result                -- Time: n/2 ; Space: n/2
+            remove right[0] from right               -- Time: n/2 ; Space: n/2
+ Time: O(1) ; Space: O(1)
+    append any remaining elements of left to result  -- Time: n ; Space: n
+    append any remaining elements of right to result -- Time: n ; Space: n
+
+    return result                                    -- Time: 1 ; Space: 1
+                                            -- Total -------------------------------
+                                                     -- Time: 5n+2; Space: 6n+1

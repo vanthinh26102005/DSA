@@ -1,0 +1,22 @@
+function quickSort(arr, low, high)                 
+    if low < high                                   -- Time: 1   ; Space: 0
+        pivotIndex = partition(arr, low, high)      -- Time: n   ; Space: 1
+        quickSort(arr, low, pivotIndex - 1)         -- Time: n/2 ; Space: log(n)
+        quickSort(arr, pivotIndex + 1, high)        -- Time: n/2 ; Space: log(n) 
+
+                                           -- Total -------------------------------
+                                                    -- Time: 2n+1   ; Space: 2log(n) +1
+
+function partition(arr, low, high)                  
+    pivot = arr[high]                               -- Time: 1   ; Space: 1
+    i = low - 1                                     -- Time: 1   ; Space: 1
+
+    for j = low to high - 1                         -- Time: n   ; Space: 0
+        if arr[j] < pivot                           -- Time: n   ; Space: 0
+            i = i + 1                               -- Time: 1   ; Space: 1
+            swap arr[i] and arr[j]                  -- Time: 1   ; Space: 0
+
+    swap arr[i + 1] and arr[high]                   -- Time: 1   ; Space: 0
+    return i + 1                                    -- Time: 1   ; Space: 0
+                                           -- Total -------------------------------
+                                                    -- Time: 2n+6   ; Space: 3
