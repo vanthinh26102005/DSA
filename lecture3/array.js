@@ -9,8 +9,8 @@ arr.push(100)
 console.log('insert:' ,arr)
 
 //splice still add but cut from 1st-para's index 
-//- 2rd-para's index elements
-arr.splice(1, 2, 'DSA')
+//- 2rd-para's index elements if 2rd para = 0 <=> insert
+arr.splice(1, 0, 'DSA')
 console.log('splice-random:' ,arr)
 
 //delete

@@ -56,11 +56,11 @@ class TicketSystem {
 // TS.process();
 
 // Example Usage
-const totalTickets2 = 30;
+const totalTickets2 =5;
 const ticketSystem = new TicketSystem(totalTickets2);
 
 // Simulating a million users trying to buy tickets
-for (let i = 1; i <= 36; i++) {
+for (let i = 1; i <= 10; i++) {
     const result = ticketSystem.request(`User${i}`);
     if (i % 1 === 0) console.log(result); // Output sample responses
 }
@@ -68,8 +68,8 @@ for (let i = 1; i <= 36; i++) {
 // Process all requests and issue tickets or sold-out messages
 ticketSystem.process();
 
-for (let i = 36; i <= 40; i++) {
-    const result = ticketSystem.request(`User${i}`);
-    if (i % 1 === 0) console.log(result); // Output sample responses
-}
-ticketSystem.process();
+// for (let i = 6; i <= 10; i++) {
+//     const result = ticketSystem.request(`User${i}`);
+//     if (i % 1 === 0) console.log(result); // Output sample responses
+// }
+// ticketSystem.process();
