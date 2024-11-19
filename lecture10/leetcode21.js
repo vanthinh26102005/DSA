@@ -36,8 +36,4 @@ var mergeTwoLists = function (list1, list2) {
     return res.next;
 };
 
-const list1 = createLinkedList([1, 2, 4]);
-const list2 = createLinkedList([1, 3, 4]);
 
-const mergedList = mergeTwoLists(list1, list2);
-console.log(printLinkedList(mergedList)); // Output: [1, 1, 2, 3, 4, 4]
