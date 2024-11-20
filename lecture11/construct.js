@@ -1,4 +1,3 @@
-// Define a Binary Tree Node
 class Node {
     constructor(value) {
         this.value = value;
@@ -61,11 +60,7 @@ function display(root) {
 }
 
 
-// Input array
 const rootArray = [3, 9, 5, null, 2, 15, 7];
-
-// Construct the binary tree
 const root = construct(rootArray);
-
-// Print the tree
 console.log("Tree Level Order:", display(root));
+
