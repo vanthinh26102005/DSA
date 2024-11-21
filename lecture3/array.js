@@ -25,4 +25,3 @@ console.log(arr.includes('a')) //true
 
 
 
-

@@ -66,7 +66,11 @@ console.log(mylist)
 mylist.insert('a')
 console.log(mylist)
 mylist.insert('b')
-console.log(mylist)
+
+let temp = mylist;
+console.log('mylist:', mylist);
+
+console.log('temp:',temp);
 
 //delete
 console.log('---after delete---')
