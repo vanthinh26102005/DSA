@@ -12,7 +12,7 @@
  */
 
 function generateTrees(n){
-    if( n === 0) return [];
+    if( n === 0) return [];                                     
     
     function buildTrees(start, end) {
         const trees = []; // array of trees -> res;
