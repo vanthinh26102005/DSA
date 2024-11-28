@@ -1,0 +1,34 @@
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var maxPathSum = function(root) {
+    if(!root) return [];
+    const stack = [{ node: root, path: []}];
+    const res =[];
+    while(stack.length > 0) {
+        const {node, path} = stack.pop();
+        
+        // add current node to current path
+        const currentPath = [...path, node.data];
+
+        //if node is leaf -> add to path
+        if( !node.right && !node.left){
+            res.push(currentPath);
+        }
+        else{
+            //if node isn't a leaf -> push children to stack -> continue find path
+            if(node.right) stack.push({node: node.right, path: currentPath})
+            if(node.left) stack.push({node: node.left, path: currentPath})
+        }
+    }
+    return res;
+};
