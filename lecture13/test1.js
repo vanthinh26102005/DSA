@@ -104,7 +104,7 @@ const maxRootToLeafSum = (root) => {
     return root.data + Math.max(leftSum, rightSum);
 };
 
-// Create tree
+//create tree
 const tree = new BinaryTree(6);
 tree.root.left = new Node(4);
 tree.root.left.left = new Node(1);
@@ -112,7 +112,7 @@ tree.root.left.right = new Node(5);
 tree.root.right = new Node(8);
 tree.root.right.right = new Node(10);
 
-// Outputs
+//outputs
 console.log("Layer by Layer:", levelOrderTraversal(tree.root));
 console.log("All Root-to-Leaf Paths:", rootToLeafPaths(tree.root));
 console.log("ZigZag Order:", zigzagTraversal(tree.root));
