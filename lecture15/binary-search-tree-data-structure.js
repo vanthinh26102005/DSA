@@ -74,7 +74,7 @@ class BinarySearchTree {
         }
     }
 
-    //PreReverseOrder()
+    //PreReverseOrder() Node-Right-Left
     preReverseOrder(){
         if(this.root == null) {
             return null

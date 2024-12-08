@@ -12,7 +12,7 @@ class BinaryTree {
      }
 }
 
-const printLayerByLayer = (root) => { //  levelOrder traverse
+const printLayerByLayer = (root) => { //  levelOrder traverse BFS
     if(!root) return [];
     const queue = [root]; // initial arr
     const res = [];     // our final arr to show  all level  layerBylayer
@@ -30,10 +30,9 @@ const printLayerByLayer = (root) => { //  levelOrder traverse
         res.push(level)
     }   
     return res;
-    
 }
 
-const printAllPathRootToLeaf = (root) => {
+const printAllPathRootToLeaf = (root) => { //DFS
     if(!root) return [];
     const stack = [{ node: root, path: []}];
     const res =[];
