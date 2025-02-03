@@ -155,22 +155,24 @@ console.log(bst) // BinarySearchTree { root: null }
 
 
 // insert data to tree
-bst.insert(6)
-bst.insert(4)
-bst.insert(8)
 bst.insert(1)
+bst.insert(2)
+bst.insert(3)
+bst.insert(4)
 bst.insert(5)
-bst.insert(10)
+bst.insert(6)
+bst.insert(7)
+bst.insert(8)
 console.log(JSON.stringify(bst, null, 4))
-
-// tree operations
-console.log(bst.findMin()) // 1
-console.log(bst.findMax()) // 10
-console.log(bst.exist(100)) // false
-console.log(bst.exist(8)) // true
-console.log(bst.remove(8)) // undefined
-console.log(JSON.stringify(bst, null, 4))
-
-console.log(bst.exist(8)) // false
 console.log(bst.inOrder()) // [ 1, 4, 5, 6, 10 ]
-console.log(bst.preOrder()) // [ 6, 4, 1, 5, 10 ]
+
+// // tree operations
+// console.log(bst.findMin()) // 1
+// console.log(bst.findMax()) // 10
+// console.log(bst.exist(100)) // false
+// console.log(bst.exist(8)) // true
+// console.log(bst.remove(8)) // undefined
+// console.log(JSON.stringify(bst, null, 4))
+
+// console.log(bst.exist(8)) // false
+// console.log(bst.preOrder()) // [ 6, 4, 1, 5, 10 ]

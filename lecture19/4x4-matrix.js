@@ -6,6 +6,7 @@ const matrix = [
 ]
 console.log(matrix[1]);
 
+//RECURSION
 const RecursionPrint = (arr) => {
 
     // row by row
@@ -38,7 +39,7 @@ const RecursionPrint = (arr) => {
 }
 RecursionPrint(matrix)
 
-
+//FOR
 // row by row
 const ForPrint = (arr) => {
     // row by row

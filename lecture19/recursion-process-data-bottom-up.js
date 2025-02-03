@@ -20,7 +20,7 @@ const fibForLoop = (n) => {
 }
 
 console.log(fibForLoop(10)) //55
-console.log(fibForLoop(4)) //55
+console.log(fibForLoop(4)) //3
 // Time complexity: O(n)
 
 console.log('==== equivalent Recursion solution ====')
@@ -31,4 +31,5 @@ const fibRecursion = (n) => {
 }
 
 console.log(fibRecursion(10)) //55
-console.log(fibRecursion(4)) //55
+console.log(fibRecursion(4)) //3
+// Time complexity: O(2^n)
